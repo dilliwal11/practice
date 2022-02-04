@@ -14,6 +14,12 @@ import java.util.List;
 public class DemoController {
     @Autowired
     private EmployeeService employeeService;
+
+    @GetMapping("/testApi")
+    public String testApi () {
+        return "Hello this is test api";
+    }
+
     @GetMapping("/demoControllerMethod")
     public String demoMethod(){
         return "demo hi";
