@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo BUILD START...
+      - mvn clean package
+  post_build:
+    commands:
+      - echo BUILD COMPLETE...
+artifacts:
+  files:
+    - target/crudApp.jar
+  discard-paths: yes
